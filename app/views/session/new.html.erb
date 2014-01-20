@@ -1,0 +1,25 @@
+<%= form_tag( :session_create, :method => "post" ) do %>
+
+    <h1>Login:</h1>
+
+    <div class="error_message">
+      <%= flash.now[:alert] if flash.now[:alert] %>
+    </div>
+
+    <div class="form_control">
+        <%= label_tag :email %>
+        <%= email_field_tag :email %>
+    </div>
+
+    <div class="form_control">
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+    </div>
+
+    <div class="form_control">
+      <%= submit_tag "Login"%>
+      <br>
+      <%= link_to "Sign up", :user_create %>
+    </div>
+
+<% end %>
