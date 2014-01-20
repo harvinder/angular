@@ -7,6 +7,8 @@ Angular::Application.routes.draw do
   get 'session/create'
   post 'session/create'
   get 'welcome/index'
+  
+  resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
