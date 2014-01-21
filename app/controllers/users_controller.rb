@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new( params[ :user ] )
     
     if @user.save 
-      redirect_to :welcome_index, :notice => "Signed up and Logged In!"
+      redirect_to :welcome_index, :flash => { :success => "Signed Up and Logged In!" }
     else
       render "new"
     end
