@@ -1,23 +1,20 @@
-<%= form_tag( :session_create, :method => "post" ) do %>
+<%= form_tag( :session_create, :method => "post", :role=> "form" ) do %>
 
-    <h1>Login:</h1>
+  <h1>Login</h1>
 
-    <div class="error_message">
-      <%= flash.now[:alert] if flash.now[:alert] %>
-    </div>
-
-    <div class="form_control">
-        <%= label_tag :email %>
+    <div class="field">
+    <%= label_tag :email %><br>
         <%= email_field_tag :email %>
     </div>
 
-    <div class="form_control">
-      <%= label_tag :password %>
+    <div class="field">
+      <%= label_tag :password %><br>
       <%= password_field_tag :password %>
     </div>
 
-    <div class="form_control">
-      <%= submit_tag "Login"%> <%=link_to "Sign up", :new_user%>
+    <div class="field">
+      <br>
+      <%= submit_tag "Login", :class=>"btn btn-primary" %> <%=link_to "Sign up", :new_user%>
     </div>
 
 <% end %>
