@@ -13,34 +13,34 @@
 </div>
 <% end %>
 
-<div class="field">
-  <%=  f.label :first_name%><br>
-  <%=  f.text_field :first_name%>
-</div>
+<div class="container col-lg-2">
+  <div class="form-group">
+    <label for="first_name">First Name</label>
+    <%=  f.text_field :first_name, :class=>"form-control", :placeholder => "First Name"%>
+  </div>
 
-<div class="field">
-  <%=  f.label :last_name%><br>
-  <%=  f.text_field :last_name%>
-</div>
- 
-<div class="field">
-  <%=  f.label :email %><br>
-  <%=  f.email_field :email%>
-</div>
+  <div class="form-group">
+    <label for="last_name">Last Name</label>
+    <%=  f.text_field :last_name, :class=>"form-control", :placeholder => "Last Name"%>
+  </div>
 
-<div class="field">
-  <%=  f.label :password %><br>
-  <%=  f.password_field :password%>
-</div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <%=  f.email_field :email, :class=>"form-control", :placeholder => "Email"%>
+  </div>
 
-<div class="field">
-  <%=  f.label :password_confirmation %><br>
-  <%=  f.password_field :password_confirmation %>
-</div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <%=  f.password_field :password, :class=>"form-control", :placeholder => "Password"%>
+  </div>
 
-<div class="field">
-  <br>
-  <%= f.submit "Sign up", :class => "btn btn-primary" %>
-</div>
+  <div class="form-group">
+    <label for="password_confirmation">Password Confirmation</label>
+    <%=  f.password_field :password_confirmation, :class=>"form-control", :placeholder => "Password Confirmation" %>
+  </div>
 
+  <div class="form-group">
+    <%= f.submit "Sign up", :class => "btn btn-primary" %>
+  </div>
+</div>
 <% end  %>
