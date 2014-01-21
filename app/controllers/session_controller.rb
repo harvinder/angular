@@ -9,7 +9,7 @@ class SessionController < ApplicationController
       session[ :user_id ] = user.id
       redirect_to :welcome_index, :notice => "Logged In!"
     else
-      flash.now[:alert] = "Invalid email or password" if params[ :email ]
+      flash[:error] = "Invalid email or password" if params[ :email ]
       render "new"
     end
   end
